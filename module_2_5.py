@@ -19,14 +19,22 @@ def returnList(count, value):
         tempList.append(value)
     return tempList
 
-def getMatrix(n, m, value):
+def getMatrix(n = 2, m = 2, value = 3):
     matrixList = []
     for i in range(n):
         matrixList.append(returnList(m, value))
     return matrixList
+#-----------------------------------------------
 
 matrix = getMatrix(3, 3, 9)
 print(matrix)
 showMatrix(matrix)
+
 showMatrix(5)
 
+matrix = getMatrix()
+showMatrix(matrix)
+
+listParam = [4, 4, 6]
+matrix = getMatrix(*listParam)
+showMatrix(matrix)
